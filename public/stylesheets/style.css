@@ -80,7 +80,7 @@
   font-family: Arial;
   color: #ffffff;
   font-size: 20px;
-  background: #ff3b3f !important;
+  background: #447314;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
@@ -102,15 +102,17 @@ ul li {
   width: 50%;
   margin: 0 auto;
 }
+
 .form-container {
+   margin: 0 auto; 
    border: 1px solid #f2e3d2;
-   background: #c9b7a2;
-   background: -webkit-gradient(linear, left top, left bottom, from(#f2e3d2), to(#c9b7a2));
-   background: -webkit-linear-gradient(top, #f2e3d2, #c9b7a2);
-   background: -moz-linear-gradient(top, #f2e3d2, #c9b7a2);
-   background: -ms-linear-gradient(top, #f2e3d2, #c9b7a2);
-   background: -o-linear-gradient(top, #f2e3d2, #c9b7a2);
-   background-image: -ms-linear-gradient(top, #f2e3d2 0%, #c9b7a2 100%);
+   background: #a7c7a2;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d1e0f0), to(#a7c7a2));
+   background: -webkit-linear-gradient(top, #d1e0f0, #a7c7a2);
+   background: -moz-linear-gradient(top, #d1e0f0, #a7c7a2);
+   background: -ms-linear-gradient(top, #d1e0f0, #a7c7a2);
+   background: -o-linear-gradient(top, #d1e0f0, #a7c7a2);
+   background-image: -ms-linear-gradient(top, #d1e0f0 0%, #a7c7a2 100%);
    -webkit-border-radius: 14px;
    -moz-border-radius: 14px;
    border-radius: 14px;
@@ -126,11 +128,11 @@ ul li {
    }
 .form-field {
    border: 1px solid #c9b7a2;
-   background: #e4d5c3;
+   background: #e3d5c3;
    -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
    border-radius: 4px;
-   color: #c9b7a2;
+   color: #a2c7c0;
    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
@@ -140,10 +142,10 @@ ul li {
    }
 .form-field:focus {
    background: #fff;
-   color: #725129;
+   color: #284370;
    }
 .form-container h2 {
-   text-shadow: #fdf2e4 0 1px 0;
+   text-shadow: #e5eafc 0 1px 0;
    font-size:18px;
    margin: 0 0 10px 0;
    font-weight:bold;
@@ -151,8 +153,8 @@ ul li {
     }
 .form-title {
    margin-bottom:10px;
-   color: #472c0d;
-   text-shadow: #fdf2e4 0 1px 0;
+   color: #0d451c;
+   text-shadow: #e5eafc 0 1px 0;
    }
 .submit-container {
    margin:8px 0;
