@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824004451) do
+ActiveRecord::Schema.define(version: 20170824011026) do
 
-  create_table "buckets", force: :cascade do |t|
+  create_table "goals", force: :cascade do |t|
     t.string  "name"
     t.integer "list_id"
   end
