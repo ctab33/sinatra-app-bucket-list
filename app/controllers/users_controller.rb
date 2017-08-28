@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'users/login'
     else
-      redirect to '/lists'
+    redirect to '/lists'
     end
   end
 

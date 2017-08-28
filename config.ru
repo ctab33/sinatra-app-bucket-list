@@ -7,5 +7,5 @@ end
 #use Rack::MethodOverride
 use UsersController
 #use GoalsController
-#use ListsController
+use ListsController
 run ApplicationController
