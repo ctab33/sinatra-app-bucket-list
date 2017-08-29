@@ -3,10 +3,11 @@
 <% @lists.each do |list| %>
   <h3>These are Your Bucket Lists</h3>
   <ul class="list">
-    <li><a href ="/lists/<%=list.id%>"><%= list.name %></a></li>
+    <li><a href="/lists/<%=list.id%>" class="link_color"><%= list.name %></a></li>
   </ul>
-  
-  <p><a href="/lists/new">Create A New List</a></p>
-  <p><a href="/lists/<%=list.id%>/edit">Edit Your List</a></p>
-  <p><a href="/goals/new">Add a Goal to Your List</a></p>
+  <div class="action_buttons">
+    <button class="submit-button" type="button"><a href="/lists/new">Create A New List</a></button>
+    <button class="submit-button" type="button"><a href="/lists/<%=list.id%>/edit">Edit Your List</a></button>
+    <button class="submit-button" type="button"><a href="/goals/new">Add a Goal to Your List</a></button>
+  </div>
   <% end %>

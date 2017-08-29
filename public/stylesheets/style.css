@@ -1,8 +1,8 @@
 @media screen {
   /* --- Reset Styles --- */
-  * {
+ * {
     list-style: none;
-    /*margin: 0;*/
+    margin: 0;
     padding: 0;
   }
 
@@ -177,7 +177,7 @@ ul li {
    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-   text-shadow: #addc7e 0 1px 0;
+   /*text-shadow: #addc7e 0 1px 0;*/
    color: #31540c;
    font-family: helvetica, serif;
    padding: 8.5px 18px;
@@ -210,5 +210,19 @@ ul li {
    color: #fff;
    }
 .list {
-  text-decoration: none
+  text-decoration: none;
+  padding: 10px;
+}
+ a:link {
+   text-decoration: none;
+   color: #fff;
+ }
+
+ .action_buttons {
+   text-align: center;
+   color: #fff;
+ }
+
+.link_color {
+  color: #31540c !important;
 }

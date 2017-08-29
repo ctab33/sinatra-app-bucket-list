@@ -1,0 +1,13 @@
+<h1><%= @list.name %></h1>
+<h3>Goals in Your List</h3>
+
+<% @list.goals.each do |goal| %>
+  <ol>
+    <li><a href="/goals/<%=goal.id%>"><%= goal.name %></a></li>
+  </ol>
+<% end %>
+
+<div class="action_buttons">
+  <button class="submit-button" type="button"><a href="/lists/<%=list.id%>/edit">Edit Your List</a></button>
+  <button class="submit-button" type="button"><a href="/goals/new">Add a Goal to Your List</a></button>
+</div>

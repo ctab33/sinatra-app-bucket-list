@@ -1,20 +1,20 @@
 <form class="form-container" method=POST action="/lists/<%=@list.id%>">
-  <div class="form-title"><h3>Edit Your "<%=@list.name%>" List:</h3></div>
-  <div class="form-title">New List Name</div>
+  <div class="form-title"><h3>Edit Your <%=@list.name%> List:</h3></div>
+  <div class="form-title">Rename Your List</div>
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input class="form-field" type="text" name="name" value="<%=@list.name%>">
+  <input class="form-field" type="text" name="name" value="New Name">
 
-  <div class="sumbit-container">
-    <input class="sumbit-button" type="submit" value="Update">
+  <div class="submit-container">
+    <input class="submit-button" type="submit" value="Update">
   </div>
 </form>
 <br>
 <br>
 <form class="form-container" method="POST" action="/lists/<%=@list.id%>/delete">
-  <div class="form-title"><h3>Or would you rather delete your "<%=@list.name%>" list?</h3></div>
+  <div class="form-title"><h3>Or would you rather delete your <%=@list.name%> list?</h3></div>
   <input id="hidden" type="hidden" name="_method" value="delete">
-  <input class="form-field" type="text" name="name" value="<%=@list.name%>">
-    <div class="sumbit-container">
-    <input class="sumbit-button" type="submit" value="Delete">
+  <!--<input class="form-field" type="text" name="name" value="<%=@list.name%>">-->
+    <div class="submit-container">
+    <input class="submit-button" type="submit" value="Delete">
   </div>
 </form>
