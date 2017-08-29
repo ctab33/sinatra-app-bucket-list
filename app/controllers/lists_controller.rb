@@ -37,7 +37,7 @@ class ListsController < ApplicationController
     erb :'lists/edit'
   end
 
-  delete '/lists/:id' do
+  delete '/lists/:id/delete' do
     @list = List.find_by_id(params[:id])
     @list.destroy
     redirect to '/lists'
@@ -48,6 +48,6 @@ class ListsController < ApplicationController
     @list.name = params[:title]
     @list.save
     redirect to "/lists/#{@list.id}"
-  end 
+  end
 
 end

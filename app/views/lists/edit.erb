@@ -10,10 +10,11 @@
 </form>
 <br>
 <br>
-<form class="form-container" method="POST" action="/lists/<%=@list.id%>">
+<form class="form-container" method="POST" action="/lists/<%=@list.id%>/delete">
   <div class="form-title"><h3>Or would you rather delete your "<%=@list.name%>" list?</h3></div>
   <input id="hidden" type="hidden" name="_method" value="delete">
-  <div class="sumbit-container">
+  <input class="form-field" type="text" name="name" value="<%=@list.name%>">
+    <div class="sumbit-container">
     <input class="sumbit-button" type="submit" value="Delete">
   </div>
 </form>
