@@ -32,7 +32,6 @@ class UsersController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      flash[:message] = "You have successfully logged in."
       redirect to '/lists'
     else
       redirect to '/signup'
@@ -45,7 +44,7 @@ class UsersController < ApplicationController
     else
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
       session[:user_id] = @user.id
-      redirect to '/lists'
+      redirect to '/lists/new'
     end
   end
 

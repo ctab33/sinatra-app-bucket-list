@@ -1,12 +1,12 @@
 <h3>Welcome, <%= current_user.username%>!</h3>
 
-<h3>These are Your Bucket Lists</h3>
-
-
 <% @lists.each do |list| %>
+  <h3>These are Your Bucket Lists</h3>
   <ul class="list">
     <li><a href ="/lists/<%=list.id%>"><%= list.name %></a></li>
   </ul>
+  
+  <p><a href="/lists/new">Create A New List</a></p>
   <p><a href="/lists/<%=list.id%>/edit">Edit Your List</a></p>
   <p><a href="/goals/new">Add a Goal to Your List</a></p>
-<% end %>
+  <% end %>
