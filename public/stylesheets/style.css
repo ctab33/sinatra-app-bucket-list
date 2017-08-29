@@ -42,6 +42,7 @@
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 16px;
+    margin: 5px;
   }
 
   h4 {
@@ -92,6 +93,7 @@
 
 ul {
   list-style-type: none;
+  text-decoration: none;
 }
 
 ul li {
@@ -104,7 +106,7 @@ ul li {
 }
 
 .form-container {
-   margin: 0 auto; 
+   margin: 0 auto;
    border: 1px solid #f2e3d2;
    background: #a7c7a2;
    background: -webkit-gradient(linear, left top, left bottom, from(#d1e0f0), to(#a7c7a2));
@@ -207,3 +209,6 @@ ul li {
    background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
    color: #fff;
    }
+.list {
+  text-decoration: none
+}

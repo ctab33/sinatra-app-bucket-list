@@ -1,4 +1,7 @@
+require 'rack-flash'
+
 class UsersController < ApplicationController
+#use Rack::Flash
 
   get '/login' do
     if !logged_in?
@@ -29,6 +32,7 @@ class UsersController < ApplicationController
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+      flash[:message] = "You have successfully logged in."
       redirect to '/lists'
     else
       redirect to '/signup'
