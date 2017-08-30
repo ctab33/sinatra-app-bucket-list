@@ -1,0 +1,27 @@
+<form class="form-container" method=POST action="/goals/<%=@goal.id%>">
+  <div class="form-title"><h3>Edit Your <%=@goal.name%> List:</h3></div>
+  <div class="form-title">Enter Revised Your Goal</div>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input class="form-field" type="text" name="name" value="New Goal">
+
+  <label>Choose the list where your goal should go:</label>
+  <select name="list_id">
+    <% current_user.lists.each do |list| %>
+      <option value=<%=list.id%> <%= "selected" if list.id==@goal.list.id %> ><%= list.name%></option>
+    <% end %>
+  </select>
+
+  <div class="submit-container">
+    <input class="submit-button" type="submit" value="Update">
+  </div>
+</form>
+<br>
+<br>
+<form class="form-container" method="POST" action="/goals/<%=@goal.id%>/delete">
+  <div class="form-title"><h3>Or would you rather delete your <%=@goal.name%>?</h3></div>
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <!--<input class="form-field" type="text" name="name" value="<%=@list.name%>">-->
+    <div class="submit-container">
+    <input class="submit-button" type="submit" value="Delete">
+  </div>
+</form>
