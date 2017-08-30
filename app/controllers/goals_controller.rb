@@ -21,6 +21,26 @@ class GoalsController < ApplicationController
     redirect to "/goals/#{@goal.id}"
   end
 
-  
+  get 'goals/:id' do
+    @goal = Goal.find_by_id(params[:id])
+    erb :'goals/show'
+  end
+
+  post '/goals' do
+    current_user.goals.create(params)
+    redirect to "/goals"
+  end
+
+  get 'goals/:id' do
+    @goal = Goal.find_by_id(params[:id])
+    erb :'/goals/edit'
+  end
+
+  delete 'goals/:id' do
+    @goal = Goal.find_by_id(params[:id])
+    @goal.delete
+    redirect '/goals'
+  end
+
 
 end
