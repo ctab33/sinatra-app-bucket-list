@@ -5,9 +5,9 @@
   <ul class="list">
     <li><a href="/lists/<%=list.id%>" class="link_color"><%= list.name %></a></li>
   </ul>
-  <div class="action_buttons">
-    <button class="submit-button" type="button"><a href="/lists/new">Create A New List</a></button>
-    <button class="submit-button" type="button"><a href="/lists/<%=list.id%>/edit">Edit Your List</a></button>
-    <button class="submit-button" type="button"><a href="/goals/new">Add a Goal to Your List</a></button>
+  <div>
+    <a href="/lists/new">Create A New List</a>
+    <a href="/lists/<%=list.id%>/edit">Edit Your List</a>
+    <a href="/goals/new">Add a Goal to Your List</a>
   </div>
   <% end %>

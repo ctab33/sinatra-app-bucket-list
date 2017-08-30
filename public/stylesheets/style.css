@@ -213,6 +213,10 @@ ul li {
   text-decoration: none;
   padding: 10px;
 }
+
+a {
+  text-decoration: none;
+}
  a:link {
    text-decoration: none;
    color: #fff;

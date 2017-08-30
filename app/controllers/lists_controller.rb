@@ -2,6 +2,7 @@ class ListsController < ApplicationController
   get '/lists' do
    if logged_in?
      @lists = current_user.lists
+     #@lists = List.all
      erb :'lists/index'
    else
      redirect to '/login'
@@ -20,10 +21,10 @@ class ListsController < ApplicationController
    if params[:name] == ""
      redirect to '/lists/new'
    else
-     #current_user.lists.create(params)
-     @list = List.new(params)
-     @list.user_id = session[:user_id]
-     @list.save
+     current_user.lists.create(params)
+    #  @list = List.new(params)
+    #  @list.user_id = session[:user_id]
+    #  @list.save
      redirect to "/lists"
    end
  end
