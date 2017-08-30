@@ -1,0 +1,16 @@
+<form class="form-container" action="/goals" method="POST">
+  <div class="form-title"><h1>Add Goals to Your Bucket List</h1></div>
+  <div class="form-title">Goal</div>
+  <input class="form-field" type="text" name="name"><br>
+
+  <label>Choose the list where your goal should go:</label>
+  <select name="list_id">
+    <% current_user.lists.each do |list| %>
+      <option value=<%=list.id%>><%= list.name%></option>
+    <% end %>
+  </select>
+
+  <div class="submit-container">
+    <input class="submit-button" type="submit" value="Submit">
+  </div>
+</form>

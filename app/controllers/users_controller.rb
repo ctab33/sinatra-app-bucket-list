@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'users/new'
     else
-      redirect to '/goals'
+      redirect to '/lists'
     end
   end
 

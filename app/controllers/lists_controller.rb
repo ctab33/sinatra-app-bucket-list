@@ -9,14 +9,6 @@ class ListsController < ApplicationController
    end
  end
 
- get '/lists/new' do
-   if logged_in?
-     erb :'lists/new'
-   else
-     redirect to '/login'
-   end
- end
-
  post '/lists' do
    if params[:name] == ""
      redirect to '/lists/new'
@@ -28,6 +20,16 @@ class ListsController < ApplicationController
      redirect to "/lists"
    end
  end
+
+ get '/lists/new' do
+   if logged_in?
+     erb :'lists/new'
+   else
+     redirect to '/login'
+   end
+ end
+
+
 
  get '/lists/:id' do
    if logged_in?
