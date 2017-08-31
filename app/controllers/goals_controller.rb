@@ -27,7 +27,7 @@ class GoalsController < ApplicationController
   end
 
   post '/goals' do
-    current_user.goals.create(params)
+    current_user.goals.create(name: params[:name])
     redirect to "/goals"
   end
 

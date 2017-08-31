@@ -9,18 +9,6 @@ class ListsController < ApplicationController
    end
  end
 
- post '/lists' do
-   if params[:name] == ""
-     redirect to '/lists/new'
-   else
-     current_user.lists.create(params)
-    #  @list = List.new(params)
-    #  @list.user_id = session[:user_id]
-    #  @list.save
-     redirect to "/lists"
-   end
- end
-
  get '/lists/new' do
    if logged_in?
      erb :'lists/new'
@@ -29,18 +17,6 @@ class ListsController < ApplicationController
    end
  end
 
-
-
- get '/lists/:id' do
-   if logged_in?
-    @list = List.find_by_id(params[:id])
-    erb :'lists/show'
-  else
-    redirect to "/login"
-  end
- end
-
- ##### EDIT LIST ACTIONS #####
 
  get '/lists/:id/edit' do #load edit form
     if logged_in?
@@ -60,6 +36,33 @@ class ListsController < ApplicationController
     @list.update(name: params[:name])
     redirect to "/lists/#{@list.id}"
   end
+
+  get '/lists/:id' do
+    if logged_in?
+     @list = List.find_by_id(params[:id])
+     erb :'lists/show'
+   else
+     redirect to "/login"
+   end
+  end
+
+ post '/lists' do
+   if params[:name] == ""
+     redirect to '/lists/new'
+   else
+     current_user.lists.create(name: params[:name])
+    #  @list = List.new(params)
+    #  @list.user_id = session[:user_id]
+    #  @list.save
+     redirect to "/lists"
+   end
+ end
+
+
+ get '/lists/:id' do
+   @list = List.find_by_id(param[:id])
+   erb :'lists/edit'
+ end
 
   delete '/lists/:id/delete' do
     if logged_in?
