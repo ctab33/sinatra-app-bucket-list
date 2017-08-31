@@ -3,11 +3,11 @@
 
 <% @list.goals.each do |goal| %>
   <ol>
-    <li><a href="/goals/<%=goal.id%>"><%= goal.name %></a></li>
+    <li><a href="/goals/<%=@goal.id%>"><%= goal.name %></a></li>
   </ol>
 <% end %>
 
 <div class="action_buttons">
-  <button class="submit-button" type="button"><a href="/lists/<%=list.id%>/edit">Edit Your List</a></button>
-  <button class="submit-button" type="button"><a href="/goals/new">Add a Goal to Your List</a></button>
+  <a href="/goals/new" class="action">Add a Goal to Your List</a>
+  <a href="/lists/<%=@list.id%>/edit" class="action">Edit Your List Name</a>
 </div>

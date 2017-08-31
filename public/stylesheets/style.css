@@ -222,10 +222,18 @@ a {
    color: #fff;
  }
 
- .action_buttons {
-   text-align: center;
-   color: #fff;
+ a.action:link {
+   background-color: #6aa436;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
  }
+
+ a.action:hover, a.action:active {
+    background-color: green;
+}
 
 .link_color {
   color: #31540c !important;
