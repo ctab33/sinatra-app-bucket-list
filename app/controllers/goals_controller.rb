@@ -1,6 +1,6 @@
 class GoalsController < ApplicationController
   get '/goals' do
-    #@lists = current_user.lists
+    @lists = current_user.lists
     @goals = Goal.find_by_id(params[:id])
     erb :'goals/index'
   end
@@ -29,7 +29,10 @@ class GoalsController < ApplicationController
   end
 
   post '/goals' do
-    current_user.goals.create(name: params[:name])
+    #binding.pry
+    list = List.find_by_id(params[:list_id])
+    @goal = list.goals.create(name: params[:name])
+    #current_user.goals.create(name: params[:name])
     redirect to "/goals"
   end
 

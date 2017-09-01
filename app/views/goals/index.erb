@@ -1,8 +1,0 @@
-<h1><%= current_user.username %>, here's a full list of all your goals:</h1>
-
-<% current_user.goals.each do |goal| %>
-  <ol>
-    <%= goal.name %>
-  </ol>
-  <a href="/goals/<%=goal.id%>/edit">Edit Your Goals</a>
-<% end %>
